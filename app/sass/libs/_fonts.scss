@@ -1,0 +1,43 @@
+$ProximaBlack: 'ProximaNovaBlack';
+$ProximaBold: 'ProximaNovaBold';
+$Proximalight: 'ProximaNovaLight';
+$ProximaSemiBold: 'ProximaNovaSemibold';
+
+
+@font-face {
+  font-family: 'ProximaNovaBlack';
+  src: url('../fonts/ProximaNova/ProximaNovaBlack.eot');
+  src: local('☺'), url('../fonts/ProximaNova/ProximaNovaBlack.woff')
+  format('woff'), url('../fonts/ProximaNova/ProximaNovaBlack.ttf')
+  format('truetype'), url('../fonts/ProximaNova/ProximaNovaBlack.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url('../fonts/ProximaNova/ProximaNovaBold.eot');
+  src: local('☺'), url('../fonts/ProximaNova/ProximaNovaBold.woff')
+  format('woff'), url('../fonts/ProximaNova/ProximaNovaBold.ttf')
+  format('truetype'), url('../fonts/ProximaNova/ProximaNovaBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url('../fonts/ProximaNova/ProximaNovaLight.eot');
+  src: local('☺'), url('../fonts/ProximaNova/ProximaNovaLight.woff')
+  format('woff'), url('../fonts/ProximaNova/ProximaNovaLight.ttf')
+  format('truetype'), url('../fonts/ProximaNova/ProximaNovaLight.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  src: url('../fonts/ProximaNova/ProximaNovaSemibold.eot');
+  src: local('☺'), url('../fonts/ProximaNova/ProximaNovaSemibold.woff')
+  format('woff'), url('../fonts/ProximaNova/ProximaNovaSemibold.ttf')
+  format('truetype'), url('../fonts/ProximaNova/ProximaNovaSemibold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
