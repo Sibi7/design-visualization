@@ -2,7 +2,18 @@ $ProximaBlack: 'ProximaNovaBlack';
 $ProximaBold: 'ProximaNovaBold';
 $Proximalight: 'ProximaNovaLight';
 $ProximaSemiBold: 'ProximaNovaSemibold';
+$ProximaRegular: 'ProximaNovaRegular';
 
+
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url('../fonts/ProximaNova/ProximaNovaRegular.eot');
+  src: local('☺'), url('../fonts/ProximaNova/ProximaNovaRegular.woff')
+  format('woff'), url('../fonts/ProximaNova/ProximaNovaRegular.ttf')
+  format('truetype'), url('../fonts/ProximaNova/ProximaNovaRegular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'ProximaNovaBlack';
@@ -13,7 +24,6 @@ $ProximaSemiBold: 'ProximaNovaSemibold';
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'ProximaNovaBold';
   src: url('../fonts/ProximaNova/ProximaNovaBold.eot');
