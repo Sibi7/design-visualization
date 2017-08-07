@@ -20,7 +20,7 @@
       position: relative;
       float: left;
       font-size: 20px;
-      margin: 23px 0;
+      margin: 25px 0;
       &:nth-child(odd) {
         font-family:$Proximalight;
         margin-left: 50px;
@@ -48,6 +48,7 @@
     float: right;
     width: 400px;
     height: 700px;
+    margin-top: 25px;
     background: url(../img/time-and-money-img.png) center right no-repeat;
   }
 }
