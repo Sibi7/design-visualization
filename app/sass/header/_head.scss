@@ -23,5 +23,19 @@
     display: block;
     position: relative;
     float: right;
+    margin-top: 25px;
+    margin-right: 29px;
+    span{
+      color: #080808;
+      font-family: $Proximalight;
+      font-size: 19px;
+      font-weight: 300;
+      margin-left: 65px;
+      i{
+        color: #8f1552;
+        display: inline-block;
+        margin-right: 7px;
+      }
+    }
   }
 }
