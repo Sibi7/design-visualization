@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     //flexslider for consultation
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         $('.flexslider').flexslider({
             animation: "slide"
         });
@@ -11,7 +11,7 @@ $(document).ready(function () {
         controlNav: true,
         animationLoop: false,
         slideshow: false,
-        itemWidth: 200,
+        itemWidth: 153,
         itemMargin: 17,
         asNavFor: '#slider1'
     });
@@ -22,6 +22,23 @@ $(document).ready(function () {
         animationLoop: false,
         slideshow: false,
         sync: "#carousel1"
+    });
+    $('#carousel2').flexslider({
+        animation: "slide2",
+        controlNav: true,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 153,
+        itemMargin: 17,
+        asNavFor: '#slider2'
+    });
+
+    $('#slider2').flexslider({
+        animation: "slide2",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel2"
     });
     //end flexslider for consultation
     $('.js-counter').each(function () {
@@ -35,34 +52,41 @@ $(document).ready(function () {
             }
         });
     });
+    $('.header-slide__content__wrap [href^="#"]').click(function () {
+        var el = $(this).attr('href');
+        $('body').animate({
+            scrollTop: $(el).offset().top
+        }, 1200);
+        return false;
+    });
 
     //animate section better------------------------------
 
-    //img----------------------------
+//img----------------------------
     $(window).scroll(function () {
-        $('.better__left img').each(function() {
+        $('.better__left img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if(imagePos < topOfWindow+400) {
+            if (imagePos < topOfWindow + 400) {
                 $(this).addClass('fadeInUpBig').css('opacity', '1');
             }
         });
 
-        $('.better__right img').each(function() {
+        $('.better__right img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if(imagePos < topOfWindow+400) {
+            if (imagePos < topOfWindow + 400) {
                 $(this).addClass('fadeInUpBig').css('opacity', '1');
             }
         })
         //end img----------------------------
 
         //dot----------------------------
-        $('.better__block--dot').each(function() {
+        $('.better__block--dot').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             console.log(topOfWindow)
-            if(imagePos < topOfWindow+500) {
+            if (imagePos < topOfWindow + 500) {
                 $(this).css('opacity', '1')
                         .addClass('fadeInUpBig')
                         .css('height', '250px');
@@ -71,10 +95,9 @@ $(document).ready(function () {
         //end dot----------------------------
 
         //text----------------------------
-        $('.better__block--text').each(function() {
+        $('.better__block--text').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            console.log(topOfWindow)
             if(imagePos < topOfWindow+400) {
                 $(this).css('opacity', '1')
                     .addClass('animated zoomIn')
@@ -93,6 +116,7 @@ $(document).ready(function () {
         //end time-and-money----------------------------
 
     });
-    //end animate section better--------------------------------
+//end animate section better--------------------------------
 
 });
+
