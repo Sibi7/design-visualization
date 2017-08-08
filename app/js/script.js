@@ -41,17 +41,7 @@ $(document).ready(function () {
         sync: "#carousel2"
     });
     //end flexslider for consultation
-    $('.js-counter').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+
     $('.header-slide__content__wrap [href^="#"]').click(function () {
         var el = $(this).attr('href');
         $('body').animate({
@@ -60,10 +50,34 @@ $(document).ready(function () {
         return false;
     });
 
-    //animate section better------------------------------
+    //counter-------------------
+    $('.about__right__count').each(function () {
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 400) {
+            $('.js-counter').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    });
 
-//img----------------------------
+
+    //end counter-------------------
+
+    //animate when scrolling------------------------------
     $(window).scroll(function () {
+
+
+
+        //img----------------------------
         $('.better__left img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
