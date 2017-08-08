@@ -65,7 +65,6 @@ $(document).ready(function () {
             if(imagePos < topOfWindow+500) {
                 $(this).css('opacity', '1')
                         .addClass('fadeInUpBig')
-                        // .delay(1500)
                         .css('height', '250px');
             }
         })
@@ -76,12 +75,22 @@ $(document).ready(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
             console.log(topOfWindow)
-            if(imagePos < topOfWindow+500) {
+            if(imagePos < topOfWindow+400) {
                 $(this).css('opacity', '1')
                     .addClass('animated zoomIn')
             }
         })
         //end text----------------------------
+
+        //time-and-money----------------------------
+        $('.time-money__left p img').each(function() {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if(imagePos < topOfWindow+400) {
+                $(this).css('opacity', '1').addClass('animated rotateIn')
+            }
+        })
+        //end time-and-money----------------------------
 
     });
     //end animate section better--------------------------------
