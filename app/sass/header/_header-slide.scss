@@ -74,6 +74,14 @@
       a{
         position: absolute;
         bottom:  -160%;
+        height: 51px;
+        width: 51px;
+        border-radius: 50%;
+        background-color: #8f1552;
+        img{
+          height: 18px;
+          margin-top: 18.5px;
+        }
       }
     }
   }
