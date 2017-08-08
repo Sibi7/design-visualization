@@ -65,11 +65,21 @@
         float: left;
         width: 70%;
         li {
-          list-style: square;
+          list-style: none;
+          position: relative;
           font-size: 19px;
           font-family:$Proximalight;
           margin: 13px 0;
           width: 100%;
+          &:before {
+            content:'';
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            left: -16px;
+            top: 6px;
+            background: #a3927e;
+          }
         }
       }
       h2 {
@@ -99,8 +109,8 @@
   &__abstraction {
     position: relative;
     float: left;
-    height: 60px;
+    height: 100px;
     width: 100%;
-    background-image: url(../img/abstraction.png);
+    background: url(../img/abstraction.png);
   }
 }

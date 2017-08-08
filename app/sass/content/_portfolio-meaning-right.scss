@@ -1,4 +1,4 @@
-.portfolios-meaning {
+.portfolios-meaning-right {
   display: block;
   position: relative;
   float: left;
@@ -26,13 +26,12 @@
     position: relative;
     float: left;
     width: 560px;
-    &__border{
+    &__border {
       width: 446px;
       height: 1px;
       background-color: #b1bbc5;
       margin: 0 auto;
     }
-
 
     h1 {
       text-align: left;
@@ -42,7 +41,7 @@
       font-size: 36px;
       line-height: 35px;
       &:before {
-        content: '1';
+        content: '2';
         opacity: 0.13;
         color: #080808;
         font-family: $ProximaSemiBold;
@@ -67,24 +66,24 @@
       float: left;
       margin-left: 56px;
       margin-top: 19px;
-      &__photo{
+      &__photo {
         width: 78px;
         height: 78px;
         position: relative;
         float: left;
         margin-right: 11px;
         border-radius: 50%;
-        img{
+        img {
           width: 100%;
           object-fit: cover;
         }
       }
-      &__text{
+      &__text {
         display: block;
         position: relative;
         float: left;
         width: calc(100% - 89px);
-        h2{
+        h2 {
           margin-bottom: 0;
           text-align: left;
           color: #080808;
@@ -92,7 +91,7 @@
           font-size: 16px;
           font-weight: 600;
         }
-        p{
+        p {
           width: 367px;
           margin-top: 10px;
           font-style: italic;
@@ -106,12 +105,28 @@
     }
   }
   &__right {
+
     display: block;
     position: relative;
     float: left;
     width: calc(100% - 560px);
     margin-bottom: 70px;
-    &__add-item{
+    text-align: center;
+
+    &__button {
+      line-height: 46px;
+      width: 100%;
+      height: 47px;
+      border: 1px solid #ffffff;
+      background-color: #8f1552;
+      color: #fff;
+      font-family: $ProximaSemiBold;
+      font-size: 17px;
+      cursor: pointer;
+      margin-top: 23px;
+      display: block;
+    }
+    &__add-item {
       cursor: pointer;
       position: absolute;
       width: 55px;
@@ -124,19 +139,19 @@
       border-radius: 50%;
       border: 1px dashed #ffffff;
       z-index: 99;
-      &:nth-of-type(2){
+      &:nth-of-type(2) {
         top: 58%;
         left: 15%;
       }
-      &:nth-of-type(3){
+      &:nth-of-type(3) {
         top: 5%;
         left: 54%;
       }
-      &:nth-of-type(4){
+      &:nth-of-type(4) {
         top: 75%;
         left: 60%;
       }
-      span{
+      span {
         color: #ffffff;
         font-family: $Proximalight;
         font-size: 52px;
@@ -144,11 +159,11 @@
         display: block;
         margin: -3px 15px;
       }
-      &:hover{
+      &:hover {
         opacity: 1;
         transition: 200ms ease;
       }
-      &__content{
+      &__content {
         display: none;
         position: relative;
         height: 200px;
@@ -160,7 +175,7 @@
         padding: 25px;
         z-index: 9999;
       }
-      &:hover &__content{
+      &:hover &__content {
         display: block;
         z-index: 9999;
         opacity: 1;

@@ -1,0 +1,57 @@
+.departure {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #000000;
+  padding: 40px 0;
+  &__left {
+    position: relative;
+    float: left;
+    width: 55%;
+    p {
+      display: block;
+      font-family:$ProximaRegular;
+      font-size: 18px;
+      color: #fff;
+      width: 440px;
+      margin: 10px auto;
+    }
+    h2 {
+      display: block;
+      font-family: $ProximaSemiBold;
+      font-size: 30px;
+      color: #fff;
+      width: 440px;
+      margin: 20px auto;
+    }
+  }
+  &__right {
+    position: relative;
+    float: left;
+    width: 45%;
+    form {
+      position: relative;
+      float: left;
+      width: 395px;
+      input {
+        width: 100%;
+        border: 1px solid #fff;
+        height: 45px;
+        padding-left: 10px;
+        padding-right:10px;
+        box-sizing: border-box;
+        margin: 10px 0;
+        background-color: transparent;
+        color: #fff;
+        font-family:$Proximalight;
+        &[type="submit"] {
+          border:none;
+          background-color: #8f1552;
+          margin: 20px 0;
+          font-family:$ProximaSemiBold;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
