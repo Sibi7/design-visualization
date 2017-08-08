@@ -12,6 +12,7 @@
     width: 71px;
     height: 100%;
     background: transparent;
+    z-index: 1;
     a {
       display: block;
       position: relative;
@@ -19,6 +20,7 @@
       width: 100%;
       margin-top: 39px;
       color: #fff;
+      background: transparent;
       i {
         display: block;
         position: relative;
@@ -39,12 +41,12 @@
       position: relative;
       float: left;
       width: 100%;
+      background: transparent;
     }
   }
   &__content {
     display: block;
     position: relative;
-
     height: 618px;
     &__wrap {
       position: absolute;
