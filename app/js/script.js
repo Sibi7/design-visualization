@@ -70,17 +70,33 @@ $(document).ready(function () {
     });
 
     //counter-------------------
-    $('.js-counter').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
+    
+    var initCounterFlag = false;// создаем флаг для счетчика
+    
+    $(window).scroll(function () {
+
+        var counterBlock = $('#about').offset().top;       
+        
+        if($(this).scrollTop() >=  counterBlock && initCounterFlag === false){// при проверке значения флага false
+            /*console.log( 111 );*/
+            $('.js-counter').each(function () { //срабатывает анимация
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()                    
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));                        
+                    }
+                });               
+            });        
+            
+            initCounterFlag = true;//после сработки анимации значение флагу задается true, чтобы анимация прекратилась
+        } 
+            
     });
+    
+   
     //animate text header
     $('.header-slide__content__wrap h1').each(function () {
         $(this).addClass('animated bounceInDown').css('opacity', '1');
