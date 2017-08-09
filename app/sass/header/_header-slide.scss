@@ -2,6 +2,7 @@ body {
   left: 0;
   margin: 0;  
   position: relative;
+  overflow-x: hidden;
 }
 .header-slide {
   display: block;
@@ -97,8 +98,8 @@ body {
   /* Menu */
 
   .menu {
-    background: #555 url('images/menu-bg.jpg') repeat left top;
-    left: -285px; /* прячем меню */
+    background: #000;
+    left: -285px;
     height: 100%;
     position: fixed;
     width: 285px;
@@ -107,64 +108,59 @@ body {
 
   /* Basic CSS */
 
-  .background {
-    background-image: url('images/chicago-night.jpg');
-    height: 100%;
-    width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
 
   .menu ul {
-    border-top: 1px solid #555;
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
+    float: left;
+    margin-top: 50px;
   }
 
   .menu li {
-    border-bottom: 1px solid #555;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 45px;
-    padding-bottom: 3px;
+    font-family: $Proximalight;
     padding-left: 20px;
-    padding-top: 3px;
+    width: 100%;
+    display: block;
+    float: left;
+    height: 60px;
+    line-height: 65px;
+    box-sizing: border-box;
+    transition: 200ms ease;
+    &:hover{
+      background: #dee1e9;
+      transition: 200ms ease;
+    }
+    &:hover a{
+      color: #121212;
+    }
   }
 
-  .menu li:hover {
-    cursor: pointer;
-    background-color: #555;
-  }
 
   .menu a {
     color: #fff;
     font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    &:hover{
+
+    }
   }
 
   .icon-close {
-    cursor: pointer;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 6px;
-  }
-
-  .icon-menu {
+    display: block;
+    position: relative;
+    font-size: 25px;
+    margin-left: 25px;
     color: #fff;
+    font-weight: 300;
+    padding-top: 46px;
     cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    padding-bottom: 25px;
-    padding-left: 25px;
-    padding-top: 25px;
-    text-decoration: none;
-    text-transform: uppercase;
   }
 
-  .icon-menu img {
-    margin-right: 5px;
-  }
+
 }

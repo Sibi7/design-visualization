@@ -41,17 +41,7 @@ $(document).ready(function () {
         sync: "#carousel2"
     });
     //end flexslider for consultation
-    $('.js-counter').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).text()
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
+
     $('.header-slide__content__wrap [href^="#"]').click(function () {
         var el = $(this).attr('href');
         $('body').animate({
@@ -60,10 +50,34 @@ $(document).ready(function () {
         return false;
     });
 
-    //animate section better------------------------------
+    //counter-------------------
+    $('.about__right__count').each(function () {
+        var imagePos = $(this).offset().top;
+        var topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow + 400) {
+            $('.js-counter').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    });
 
-//img----------------------------
+
+    //end counter-------------------
+
+    //animate when scrolling------------------------------
     $(window).scroll(function () {
+
+
+
+        //img----------------------------
         $('.better__left img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
@@ -89,7 +103,6 @@ $(document).ready(function () {
             if (imagePos < topOfWindow + 500) {
                 $(this).css('opacity', '1')
                     .addClass('fadeInUpBig')
-                    // .delay(1500)
                     .css('height', '250px');
             }
         })
@@ -99,13 +112,22 @@ $(document).ready(function () {
         $('.better__block--text').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            console.log(topOfWindow)
-            if (imagePos < topOfWindow + 500) {
+            if (imagePos < topOfWindow + 400) {
                 $(this).css('opacity', '1')
                     .addClass('animated zoomIn')
             }
         })
         //end text----------------------------
+
+        //time-and-money----------------------------
+        $('.time-money__left p img').each(function () {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 400) {
+                $(this).css('opacity', '1').addClass('animated rotateIn')
+            }
+        })
+        //end time-and-money----------------------------
 
     });
 //end animate section better--------------------------------
@@ -115,9 +137,9 @@ $(document).ready(function () {
 
 // cache element in variable
 
-var main = function() { //главная функция
+var main = function () { //главная функция
 
-    $('.icon-menu').click(function() { /* выбираем класс icon-menu и
+    $('.icon-menu').click(function () { /* выбираем класс icon-menu и
                добавляем метод click с функцией, вызываемой при клике */
 
         $('.menu').animate({ //выбираем класс menu и метод animate
@@ -138,7 +160,7 @@ var main = function() { //главная функция
 
     /* Закрытие меню */
 
-    $('.icon-close').click(function() { //выбираем класс icon-close и метод click
+    $('.icon-close').click(function () { //выбираем класс icon-close и метод click
 
         $('.menu').animate({ //выбираем класс menu и метод animate
 
@@ -155,5 +177,10 @@ var main = function() { //главная функция
     });
 };
 
-$(document).ready(main); /* как только страница полностью загрузится, будет
-               вызвана функция main, отвечающая за работу меню */
+// $(document).on('click', '.menu', function (e) {
+//     $('.header-slide').animate({left: '-285px'});
+//     $('#burger').removeClass('show');
+// });
+$(document).ready(main);
+/* как только страница полностью загрузится, будет
+              вызвана функция main, отвечающая за работу меню */
