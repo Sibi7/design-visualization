@@ -103,6 +103,11 @@
         padding: 15px 30px;
         font-family:$ProximaSemiBold;
         background-color: #8f1552;
+        transition: 200ms ease;
+        &:hover{
+          transform: scale(1.04);
+          transition: 200ms ease;
+        }
       }
     }
   }
