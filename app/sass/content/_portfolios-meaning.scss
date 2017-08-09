@@ -245,6 +245,22 @@
   }
   #carousel1 .flex-viewport .slides li{
     height: 123px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    img{
+      height: 100%;
+    }
+  }
+  #carousel1 .flex-viewport .slides li.flex-active-slide{
+    height: 123px;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
     img{
       height: 100%;
     }
