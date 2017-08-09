@@ -318,6 +318,12 @@
   }
   #slider2 .flex-viewport .slides li{
     height: 656px;
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   #slider2 .flex-direction-nav {
     display: block;

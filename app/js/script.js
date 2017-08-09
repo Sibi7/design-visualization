@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-   /*scroll menu*/
+    /*scroll menu*/
     $(document).on('click', '.menu ul a', function (event) {
         event.preventDefault();
         var href = $(this).attr('href');
@@ -17,7 +17,7 @@ $(document).ready(function () {
         $('html,body').animate({scrollTop: top}, 1000);
         return false;
     });
-   /*close*/
+    /*close*/
 
     //flexslider for consultation
     $(window).on('load', function () {
@@ -70,6 +70,7 @@ $(document).ready(function () {
     });
 
     //counter-------------------
+
     $('.js-counter').each(function () {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
@@ -81,6 +82,7 @@ $(document).ready(function () {
             }
         });
     });
+
     //animate text header
     $('.header-slide__content__wrap h1').each(function () {
         $(this).addClass('animated bounceInDown').css('opacity', '1');
