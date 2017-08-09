@@ -51,37 +51,39 @@ $(document).ready(function () {
     });
 
     //counter-------------------
-    $('.about__right__count').each(function () {
-        var imagePos = $(this).offset().top;
-        var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow + 400) {
-            $('.js-counter').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).text()
-                }, {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-            });
-        }
+    $('.js-counter').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
-
-
-    //end counter-------------------
+    //animate text header
+    $('.header-slide__content__wrap h1').each(function () {
+        $(this).addClass('animated bounceInDown').css('opacity', '1');
+    });
+    $('.header-slide__content__wrap h2').each(function () {
+        $(this).addClass('animated bounceInUp').css('opacity', '1');
+    });
+    //end animate text header
 
     //animate when scrolling------------------------------
     $(window).scroll(function () {
-
-
-
         //img----------------------------
+        $('.menu').css({ //выбираем класс menu и метод animate
+
+            marginTop: '-63px',
+            transition: '200ms ease'
+        }); //
+
         $('.better__left img').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            if (imagePos < topOfWindow + 400) {
+            if (imagePos < topOfWindow + 0) {
                 $(this).addClass('fadeInUpBig').css('opacity', '1');
             }
         });
@@ -99,7 +101,6 @@ $(document).ready(function () {
         $('.better__block--dot').each(function () {
             var imagePos = $(this).offset().top;
             var topOfWindow = $(window).scrollTop();
-            console.log(topOfWindow)
             if (imagePos < topOfWindow + 500) {
                 $(this).css('opacity', '1')
                     .addClass('fadeInUpBig')
@@ -160,27 +161,19 @@ var main = function () { //главная функция
 
     /* Закрытие меню */
 
-    $('.icon-close').click(function () { //выбираем класс icon-close и метод click
+    $('.icon-close').click(function () {
 
-        $('.menu').animate({ //выбираем класс menu и метод animate
+        $('.menu').animate({
 
-            left: '-285px' /* при клике на крестик меню вернется назад в свое
-               положение и скроется */
+            left: '-285px'
 
-        }, 200); //скорость движения меню в мс
+        }, 200);
 
-        $('body').animate({ //выбираем тег body и метод animate
+        $('body').animate({
 
-            left: '0px' //а содержимое страницы снова вернется в положение 0px
+            left: '0px'
 
-        }, 200); //скорость движения меню в мс
+        }, 200);
     });
 };
-
-// $(document).on('click', '.menu', function (e) {
-//     $('.header-slide').animate({left: '-285px'});
-//     $('#burger').removeClass('show');
-// });
 $(document).ready(main);
-/* как только страница полностью загрузится, будет
-              вызвана функция main, отвечающая за работу меню */
