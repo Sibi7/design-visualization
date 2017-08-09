@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    /*top-banner animation*/
+    
+    /*close*/
+
     //flexslider for consultation
     $(window).on('load', function () {
         $('.flexslider').flexslider({

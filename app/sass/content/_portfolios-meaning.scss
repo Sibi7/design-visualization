@@ -129,7 +129,6 @@
       width: 55px;
       height: 55px;
       background-color: #080808;
-
       transition: 200ms ease;
       top: -536px;
       left: 16%;
@@ -183,8 +182,8 @@
       height: 55px;
       background-color: #080808;
       transition: 200ms ease;
-      top: -536px;
-      left: 16%;
+      top: -518px;
+      left: 59%;
       opacity: 0.43;
       border-radius: 50%;
       border: 1px dashed #ffffff;
@@ -204,8 +203,8 @@
       &__content {
         display: none;
         position: relative;
-        height: 200px;
-        width: 300px;
+        margin-top: 5px;
+        width: 250px;
         background: #fff;
         opacity: 0;
         border-radius: 5px;
@@ -286,6 +285,22 @@
   }
   #carousel1 .flex-viewport .slides li{
     height: 123px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    img{
+      height: 100%;
+    }
+  }
+  #carousel1 .flex-viewport .slides li.flex-active-slide{
+    height: 123px;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
     img{
       height: 100%;
     }
