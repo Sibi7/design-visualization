@@ -218,6 +218,112 @@
         opacity: 1;
       }
     }
+    &__add-item-3 {
+      cursor: pointer;
+      position: relative;
+      width: 55px;
+      height: 55px;
+      background-color: #080808;
+      transition: 200ms ease;
+      top: -446px;
+      left: 30%;
+      opacity: 0.43;
+      border-radius: 50%;
+      border: 1px dashed #ffffff;
+      z-index: 99;
+      span {
+        color: #ffffff;
+        font-family: $Proximalight;
+        font-size: 52px;
+        text-align: center;
+        display: block;
+        margin: -3px 15px;
+      }
+      &:hover {
+        opacity: 1;
+        transition: 200ms ease;
+      }
+      &__content {
+        display: none;
+        position: absolute;
+        margin-top: 5px;
+        width: 250px;
+        background: #fff;
+        opacity: 0;
+        border-radius: 5px;
+        transition: 200ms ease;
+        padding: 25px;
+        z-index: 9999;
+      }
+      &:nth-of-type(2){
+        top: -575px;
+        left: 89%;
+      }
+      &:nth-of-type(2) &__content{
+        right: 0;
+      }
+      &:nth-of-type(3){
+        top: -357px;
+        left: 38%;
+      }
+      &:hover &__content {
+        display: block;
+        z-index: 9999;
+        opacity: 1;
+      }
+
+    }
+    &__add-item-4 {
+      cursor: pointer;
+      position: relative;
+      width: 55px;
+      height: 55px;
+      background-color: #080808;
+      transition: 200ms ease;
+      top: -346px;
+      left: 45%;
+      opacity: 0.43;
+      border-radius: 50%;
+      border: 1px dashed #ffffff;
+      z-index: 99;
+      span {
+        color: #ffffff;
+        font-family: $Proximalight;
+        font-size: 52px;
+        text-align: center;
+        display: block;
+        margin: -3px 15px;
+      }
+      &:hover {
+        opacity: 1;
+        transition: 200ms ease;
+      }
+      &__content {
+        display: none;
+        position: absolute;
+        margin-top: 5px;
+        width: 250px;
+        background: #fff;
+        opacity: 0;
+        border-radius: 5px;
+        transition: 200ms ease;
+        padding: 25px;
+        z-index: 9999;
+      }
+      &:nth-of-type(2){
+        top: -232px;
+        left: 75%;
+      }
+      &:nth-of-type(2) &__content{
+        right: 0;
+      }
+      &:hover &__content {
+        display: block;
+        z-index: 9999;
+        opacity: 1;
+      }
+
+    }
   }
   .flex-viewport {
     margin-top: 17px;
