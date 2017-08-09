@@ -69,6 +69,14 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.portfolios-meaning-right__right [href^="#"]').click(function () {
+        var el = $(this).attr('href');
+        $('body').animate({
+            scrollTop: $(el).offset().top
+        }, 1200);
+        return false;
+    });
+
     //counter-------------------
 
     $('.js-counter').each(function () {

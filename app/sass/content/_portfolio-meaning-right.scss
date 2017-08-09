@@ -362,7 +362,25 @@
       }
 
     }
+    &__button{
+      width: 100%;
+      display: block;
+      height: 47px;
+      background: #8f1552;
+      margin-top: 24px;
+      color: #fff;
+      font-family: $ProximaSemiBold;
+      text-align: center;
+      line-height: 46px;
+      font-size: 17px;
+      transition: 200ms ease;
+      &:hover{
+        transition: 200ms ease;
+        transform: scale(1.04);
+      }
+    }
   }
+
   .flex-viewport {
     margin-top: 17px;
   }
