@@ -198,6 +198,7 @@ var main = function () { //главная функция
 
         }, 200); //скорость движения меню в мс
 
+
     });
 
     // $(document).on('click', function (e) {
