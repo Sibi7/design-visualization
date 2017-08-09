@@ -83,6 +83,32 @@ $(document).ready(function () {
         });
     });
 
+
+    var initCounterFlag = false;// создаем флаг для счетчика
+
+    $(window).scroll(function () {
+
+        var counterBlock = $('#about').offset().top;
+
+        if ($(this).scrollTop() >= counterBlock && initCounterFlag === false) {// при проверке значения флага false
+            /*console.log( 111 );*/
+            $('.js-counter').each(function () { //срабатывает анимация
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+
+            initCounterFlag = true;//после сработки анимации значение флагу задается true, чтобы анимация прекратилась
+        }
+
+    });
+
     //animate text header
     $('.header-slide__content__wrap h1').each(function () {
         $(this).addClass('animated bounceInDown').css('opacity', '1');
@@ -94,12 +120,6 @@ $(document).ready(function () {
 
     //animate when scrolling------------------------------
     $(window).scroll(function () {
-        //img----------------------------
-        $('.menu').css({ //выбираем класс menu и метод animate
-
-            marginTop: '-63px',
-            transition: '200ms ease'
-        }); //
 
         $('.better__left img').each(function () {
             var imagePos = $(this).offset().top;
@@ -115,7 +135,7 @@ $(document).ready(function () {
             if (imagePos < topOfWindow + 400) {
                 $(this).addClass('fadeInUpBig').css('opacity', '1');
             }
-        })
+        });
         //end img----------------------------
 
         //dot----------------------------
@@ -127,7 +147,7 @@ $(document).ready(function () {
                     .addClass('fadeInUpBig')
                     .css('height', '250px');
             }
-        })
+        });
         //end dot----------------------------
 
         //text----------------------------
@@ -138,7 +158,7 @@ $(document).ready(function () {
                 $(this).css('opacity', '1')
                     .addClass('animated zoomIn')
             }
-        })
+        });
         //end text----------------------------
 
         //time-and-money----------------------------
@@ -177,9 +197,38 @@ var main = function () { //главная функция
                при открытии меню, установим ему положение 285px */
 
         }, 200); //скорость движения меню в мс
+
     });
 
-
+    // $(document).on('click', function (e) {
+    //     if ($(e.target).closest('html').length != 1) {
+    //         $('body').click(function () {
+    //
+    //             $('.menu').animate({
+    //
+    //                 left: '-285px'
+    //
+    //             }, 200);
+    //
+    //             $('body').animate({
+    //
+    //                 left: '0px'
+    //
+    //             }, 200);
+    //         });
+    //     }
+    // });
+    $(document).mouseup(function (e) {
+        var container = $(".menu");
+        if (container.has(e.target).length === 0) {
+            $('.menu').animate({
+                left: '-285px'
+            }, 200);
+            $('body').animate({
+                left: '0px'
+            }, 200);
+        }
+    });
     /* Закрытие меню */
 
     $('.icon-close').click(function () {
