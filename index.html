@@ -96,10 +96,11 @@
             <h1>Закажите бесплатный выезд дизайнера на объект</h1>
             <h2>Узнайте скрытые возможности
                 Вашего помещения</h2>
-            <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="Телефон" required>
-                <input type="submit" value="Заказать" required>
+            <form action="#">
+                <input id="v_name" name="v_name" type="text" class="vItem"  placeholder="Ваше имя" required>
+                <input id="v_phone" name="v_phone" type="text" class="vItem" placeholder="Телефон" required >
+
+                <input id="subm" type="submit" value="Отправить">
             </form>
         </div>
     </div>
@@ -573,9 +574,9 @@
         </div>
         <div class="departure__right">
             <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="Телефон" required>
-                <input type="submit" value="Заказать бесплатную консультацию">
+                <input id="v_name2" name="v_name2" type="text" class="vItem2" placeholder="Ваше имя" required>
+                <input id="v_phone2" name="v_phone2" type="text" class="vItem2" placeholder="Телефон" required>
+                <input id="subm2" type="submit" value="Отправить">
             </form>
         </div>
     </div>
@@ -713,9 +714,10 @@
             <h2>4 выезда на объект БЕСПЛАТНО</h2>
             <p>Авторский надзор</p>
             <form>
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="Телефон" required>
-                <input type="submit" value="Заказать бесплатную консультацию">
+                <input id="v_name1" name="v_name1" type="text" class="vItem1" placeholder="Ваше имя" required>
+                <input id="v_phone1" name="v_phone1" type="text" class="vItem1" placeholder="Телефон" required>
+
+                <input id="subm1" type="submit" value="Отправить">
             </form>
         </div>
     </div>
@@ -743,6 +745,8 @@
 
 <!-- start html_close.html-->
 <script src='js/jquery-3.2.1.js' type="text/javascript"></script>
+
+<script src='js/validation.js' type="text/javascript"></script>
 <script src='js/jquery.flexslider-min.js' type="text/javascript"></script>
 <script src="js/script.min.js" type="text/javascript"></script>
 </body>
