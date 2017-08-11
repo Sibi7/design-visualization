@@ -18,4 +18,51 @@
   .consult__left{
     width: 700px;
   }
+  &__right {
+    position: relative;
+    float: left;
+    width:calc(100% - 815px);
+    box-sizing: border-box;
+    padding: 0px 40px;
+    h2 {
+      font-family:$ProximaSemiBold;
+      font-size: 30px;
+      color: #fff;
+      margin: 0;
+    }
+    p {
+      font-family:$Proximalight;
+      font-size: 18px;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+    form {
+      position: relative;
+      float: left;
+      width: 395px;
+      input {
+        width: 100%;
+        border: 1px solid #fff;
+        height: 45px;
+        padding-left: 10px;
+        padding-right:10px;
+        font-size: 17px;
+        box-sizing: border-box;
+        margin: 10px 0;
+        background-color: transparent;
+        color: #fff;
+        font-family:$Proximalight;
+        &::placeholder{
+          font-size: 17px;
+        }
+        &[type="submit"] {
+          border:none;
+          background-color: #8f1552;
+          margin: 20px 0;
+          font-family:$ProximaSemiBold;
+          color: #fff;
+        }
+      }
+    }
+  }
 }
