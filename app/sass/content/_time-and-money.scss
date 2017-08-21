@@ -1,10 +1,10 @@
 .time-money {
   position: relative;
-  float:left;
+  float: left;
   width: 100%;
   margin-bottom: 50px;
   h2 {
-    font-family:$Proximalight;
+    font-family: $Proximalight;
     font-weight: 300;
     font-size: 40px;
     text-align: center;
@@ -22,12 +22,12 @@
       font-size: 20px;
       margin: 25px 0;
       &:nth-child(odd) {
-        font-family:$Proximalight;
+        font-family: $Proximalight;
         margin-left: 50px;
       }
       &:nth-child(even) {
-        font-family:$ProximaSemiBold;
-        margin-left: 120px;
+        font-family: $ProximaSemiBold;
+        width: 90%;
       }
       img {
         opacity: 0;
@@ -40,7 +40,7 @@
         margin-top: 10px;
         position: relative;
         float: left;
-        width:calc(100% - 90px);
+        width: calc(100% - 90px);
       }
     }
   }

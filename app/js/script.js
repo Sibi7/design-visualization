@@ -257,108 +257,108 @@ var main = function () { //главная функция
 };
 $(document).ready(main);
 
-var valid = new Validation();
-var valid1 = new Validation();
-var valid2 = new Validation();
-
-valid.addTpl('kl', /^[А-Яа-яЁё\s]+$/, 'ghghghghghg');
-
-valid.init({
-    classItem: 'vItem',
-    eventElement: '#subm',
-    //event:'onblur',
-    promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
-    errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
-    successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
-    items: [
-        {
-            item:'v_name',
-            promptMsg:'Напишите свое имя',
-            successMsg:'Все верно',
-            tpl:'kir',
-            tplMsg: 'Только кириллица'
-        },
-        {
-            item:'v_phone',
-            promptMsg:'Напишите свой телефон',
-            successMsg:'Все верно',
-            tpl:'number',
-            tplMsg: 'Только цифры'
-        }
-    ],
-    submitError: function (err, form) {
-        alert('Ошибка в заполнении');
-    },
-    submitSuccess: function (err, form) {
-        if (!err) {
-            //form.submit();
-            alert('Все верно');
-        }
-    },
-});
-valid1.init({
-    classItem: 'vItem1',
-    eventElement: '#subm1',
-    //event:'onblur',
-    promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
-    errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
-    successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
-    items: [
-        {
-            item:'v_name1',
-            promptMsg:'Напишите свое имя',
-            successMsg:'Все верно',
-            tpl:'kir',
-            tplMsg: 'Только кириллица'
-        },
-        {
-            item:'v_phone1',
-            promptMsg:'Напишите свой телефон',
-            successMsg:'Все верно',
-            tpl:'number',
-            tplMsg: 'Только цифры'
-        }
-    ],
-    submitError: function (err, form) {
-        alert('Ошибка в заполнении');
-    },
-    submitSuccess: function (err, form) {
-        if (!err) {
-            //form.submit();
-            alert('Все верно');
-        }
-    },
-});
-valid2.init({
-    classItem: 'vItem2',
-    eventElement: '#subm2',
-    //event:'onblur',
-    promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
-    errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
-    successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
-    items: [
-        {
-            item:'v_name2',
-            promptMsg:'Напишите свое имя',
-            successMsg:'Все верно',
-            tpl:'kir',
-            tplMsg: 'Только кириллица'
-        },
-        {
-            item:'v_phone2',
-            promptMsg:'Напишите свой телефон',
-            successMsg:'Все верно',
-            tpl:'number',
-            tplMsg: 'Только цифры'
-        }
-    ],
-    submitError: function (err, form) {
-        alert('Ошибка в заполнении');
-    },
-    submitSuccess: function (err, form) {
-        if (!err) {
-            //form.submit();
-            alert('Все верно');
-        }
-    },
-});
+// var valid = new Validation();
+// var valid1 = new Validation();
+// var valid2 = new Validation();
+//
+// valid.addTpl('kl', /^[А-Яа-яЁё\s]+$/, 'ghghghghghg');
+//
+// valid.init({
+//     classItem: 'vItem',
+//     eventElement: '#subm',
+//     //event:'onblur',
+//     promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
+//     errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
+//     successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
+//     items: [
+//         {
+//             item:'v_name',
+//             promptMsg:'Напишите свое имя',
+//             successMsg:'',
+//             tpl:'kir',
+//             tplMsg: 'Только кириллица'
+//         },
+//         {
+//             item:'v_phone',
+//             promptMsg:'Напишите свой телефон',
+//             successMsg:'',
+//             tpl:'number',
+//             tplMsg: 'Только цифры'
+//         }
+//     ],
+//     submitError: function (err, form) {
+//         alert('Ошибка в заполнении');
+//     },
+//     submitSuccess: function (err, form) {
+//         if (!err) {
+//             //form.submit();
+//             alert('Благодарим Вас за оставленную заявку. Наш менеджер свяжется с Вами в ближайшее время.');
+//         }
+//     },
+// });
+// valid1.init({
+//     classItem: 'vItem1',
+//     eventElement: '#subm1',
+//     //event:'onblur',
+//     promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
+//     errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
+//     successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
+//     items: [
+//         {
+//             item:'v_name1',
+//             promptMsg:'Напишите свое имя',
+//             successMsg:'',
+//             tpl:'kir',
+//             tplMsg: 'Только кириллица'
+//         },
+//         {
+//             item:'v_phone1',
+//             promptMsg:'Напишите свой телефон',
+//             successMsg:'',
+//             tpl:'number',
+//             tplMsg: 'Только цифры'
+//         }
+//     ],
+//     submitError: function (err, form) {
+//         alert('Ошибка в заполнении');
+//     },
+//     submitSuccess: function (err, form) {
+//         if (!err) {
+//             //form.submit();
+//             alert('Благодарим Вас за оставленную заявку. Наш менеджер свяжется с Вами в ближайшее время.');
+//         }
+//     },
+// });
+// valid2.init({
+//     classItem: 'vItem2',
+//     eventElement: '#subm2',
+//     //event:'onblur',
+//     promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
+//     errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
+//     successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
+//     items: [
+//         {
+//             item:'v_name2',
+//             promptMsg:'Напишите свое имя',
+//             successMsg:'',
+//             tpl:'kir',
+//             tplMsg: 'Только кириллица'
+//         },
+//         {
+//             item:'v_phone2',
+//             promptMsg:'Напишите свой телефон',
+//             successMsg:'',
+//             tpl:'number',
+//             tplMsg: 'Только цифры'
+//         }
+//     ],
+//     submitError: function (err, form) {
+//         alert('Ошибка в заполнении');
+//     },
+//     submitSuccess: function (err, form) {
+//         if (!err) {
+//             //form.submit();
+//             alert('Благодарим Вас за оставленную заявку. Наш менеджер свяжется с Вами в ближайшее время.');
+//         }
+//     },
+// });

@@ -11,17 +11,19 @@
     position: relative;
     float: left;
     margin-left: 28px;
+    height: 59px;
     a{
       color: #fff;
       font-family: $Proximalight;
       font-size: 23px;
       text-transform: uppercase;
       display: block;
+      height: 60px;
       width: 100px;
-
       img{
         width: 100%;
         object-fit: cover;
+        height: 100%;
       }
     }
   }
