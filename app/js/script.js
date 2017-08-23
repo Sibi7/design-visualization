@@ -282,6 +282,7 @@ $(document).ready(main);
 var valid = new Validation();
 var valid1 = new Validation();
 var valid2 = new Validation();
+var valid4 = new Validation();
 
 valid.addTpl('kl', /^[А-Яа-яЁё\s]+$/, 'ghghghghghg');
 
@@ -368,6 +369,40 @@ valid2.init({
         },
         {
             item:'v_phone2',
+            promptMsg:'Напишите свой телефон',
+            successMsg:'',
+            tpl:'number',
+            tplMsg: 'Только цифры'
+        }
+    ],
+    submitError: function (err, form) {
+        alert('Ошибка в заполнении');
+    },
+    submitSuccess: function (err, form) {
+        if (!err) {
+            //form.submit();
+            alert('Благодарим Вас за оставленную заявку. Наш менеджер свяжется с Вами в ближайшее время.');
+        }
+    },
+
+});
+valid4.init({
+    classItem: 'vItem4',
+    eventElement: '#subm4',
+    //event:'onblur',
+    promptMsgTpl: '<div style="color: darkslateblue"><i class="fa fa-info" aria-hidden="true"></i> {msg}</div>',
+    errorMsgTpl: '<div><i class="fa fa-bomb" aria-hidden="true"></i> {msg}</div>',
+    successMsgTpl: '<div><i class="fa fa-check" aria-hidden="true"></i> {msg}</div>',
+    items: [
+        {
+            item:'v_name4',
+            promptMsg:'Напишите свое имя',
+            successMsg:'',
+            tpl:'kir',
+            tplMsg: 'Только кириллица'
+        },
+        {
+            item:'v_phone4',
             promptMsg:'Напишите свой телефон',
             successMsg:'',
             tpl:'number',
